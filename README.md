@@ -10,11 +10,11 @@ Projeto desenvolvido para a disciplina de Backend com o objetivo de sugerir o qu
 A proposta do projeto é oferecer um sistema onde o usuário pode:
 - Adicionar o nome de uma cidade que deseja visitar.
 
-- Ver detalhes como nome, país, descrição, imagem do lugar e o clima atual da cidade (através de uma API externa)
+- Ver detalhes como nome da cidade, descrição e o clima atual da cidade (através de uma API externa).
 
-- Editar ou deletar lugares cadastrados
+- Editar ou deletar lugares cadastrados.
 
-- Receber sugestões do que levar na mala com base na temperatura do local
+- Receber sugestões do que levar na mala com base na temperatura do local.
 
 ## Estrutura do Projeto
 
