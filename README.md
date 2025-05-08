@@ -59,7 +59,10 @@ model: Contém as classes que representam os dados da aplicação.
 - Exemplo de requisição: 
 ```
 {
-  "cidade": "Paris"
+  "id": "1",
+  "pais": "França",
+  "descricao": "Cidade da Torre Eiffel",
+  "nome": "Paris"
 }
 ```
 
