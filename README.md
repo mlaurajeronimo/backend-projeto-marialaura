@@ -56,7 +56,7 @@ model: Contém as classes que representam os dados da aplicação.
 
 - `POST /lugares`: adiciona um novo lugar 
 
-- Exemplo de requisição: 
+Exemplo de requisição: 
 ```
 {
   "id": "1",
@@ -64,9 +64,10 @@ model: Contém as classes que representam os dados da aplicação.
   "descricao": "Cidade da Torre Eiffel",
   "nome": "Paris"
 }
+
 ```
 
--Exemplo de resposta:
+Exemplo de resposta:
 ```
 Lugar adicionado com sucesso!
 ```
@@ -75,18 +76,72 @@ Lugar adicionado com sucesso!
 - `GET /lugares`: lista todos os lugares
 
 - `GET /lugares/buscar?nome=Paris`: busca lugares pelo nome
-- `PUT /lugares/{nome}`: edita um lugar existente
+
+
+- `PUT /lugares/{nome}`: edita um lugar existente. 
+
+
+Exemplo de requisição: 
+```
+http://localhost:8000/lugares/Paris
+
+- Adicione esse header:
+Key: Content-Type
+Value: application/json
+
+- Body: 
+{
+  "nome": "Paris",
+  "pais": "França",
+  "descricao": "Atualizei a descrição da cidade",
+  "imagemUrl": "https://novaimagem.jpg"
+}
+```
+Exemplo de resposta: 
+```
+Lugar editado com sucesso!
+```
+
+
 - `DELETE /lugares/{nome}`: deleta um lugar
+
+Exemplo de requisição: 
+```
+http://localhost:8000/lugares/Paris
+```
+Exemplo de resposta: 
+```
+Lugar deletado com sucesso!
+```
 
 
 ###  Clima
 
-- `GET /lugares/clima?cidade=Paris`: busca o clima atual da cidade informada
-- `GET /lugares/clima/sugestao?cidade=Paris` : Retorna o clima e sugestões de bagagem baseadas na temperatura.
- 
+- `GET /lugares/clima?cidade=Paris`: busca o clima atual da cidade informada.
 
-- Exemplo de resposta:
-`GET /lugares/clima/sugestao?cidade=Paris`
+Exemplo de requisição:
+```
+http://localhost:8000/lugares/clima?cidade=Paris
+```
+
+Exemplo de resposta:
+```
+{
+    "cidade": "Paris",
+    "temperatura": 17.3,
+    "descricao": "céu limpo",
+    "icone": "https://openweathermap.org/img/wn/01d.png"
+}
+```
+
+
+- `GET /lugares/clima/sugestao?cidade=Paris` : Retorna o clima e sugestões de bagagem baseadas na temperatura.
+
+Exemplo de requisição: 
+```
+http://localhost:8000/lugares/clima/sugestao?cidade=Paris
+```
+Exemplo de resposta:
 
 ```json
 {
@@ -128,7 +183,7 @@ Content-Type: application/json
 
 - O projeto contem uma rota /sobre que responde de acordo com o modelo abaixo: 
  
-Exemplo de requisição:
+Exemplo de requisição: GET
 ```http://localhost:8000/lugares/sobre```
 
 Exemplo de resposta:

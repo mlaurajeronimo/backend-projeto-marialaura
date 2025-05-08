@@ -95,6 +95,13 @@ public class LugarController {
         return weatherService.buscarClimaComSugestao(cidade);
     }
 
+    @GetMapping("/clima")
+    public ClimaDTO obterClima(@RequestParam String cidade) {
+        return weatherService.buscarClima(cidade);
+    }
+
+
+
 
 
 }
